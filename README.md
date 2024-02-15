@@ -1,5 +1,5 @@
 # ParaView_NetCDF_Particles_Reader_Plugin
-A simple, user-friendly Python plugin for ParaView that reads particles in NetCDF format. The plugin was developed an tested with ParaView 5.12 and Python 3.10.
+A simple, user-friendly Python plugin for ParaView that reads particles in NetCDF format. The plugin was developed and tested with ParaView 5.12 and Python 3.10.
 
 Please read the tutorial before using the plugin (NetCDF_ParticlesReader_TUTORIAL.pdf).
 
