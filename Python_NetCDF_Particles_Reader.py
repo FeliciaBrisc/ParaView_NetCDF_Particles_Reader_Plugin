@@ -51,7 +51,7 @@ def createModifiedCallback(anobject):
 
 
 class PythonNetCDFProfilesReader(VTKPythonAlgorithmBase):
-    """A reader that reads a NetCDF vertical profile file. The NetCDF file needs to  a "time" dimension, so 
+    """A reader that reads a NetCDF particles file. The NetCDF file needs to have a "time" dimension, so 
     the data is treated as a temporal dataset"""
 
     def __init__(self):
