@@ -43,7 +43,7 @@ def createModifiedCallback(anobject):
 
 
 # Decorators used to add the reader 
-# @smproxy.source(name="PythonNetCDFProfilesReader", label="Python-based NetCDF Profiles Reader")
+# @smproxy.source(name="PythonNetCDFParticlesReader", label="Python-based NetCDF Particles Reader")
 # @smhint.xml("""<ReaderFactory extensions="nc" file_description="Numpy NetCDF Profiles files" />""")
 @smproxy.reader(name="PythonNetCDFParticlesReader", label="Python-based NetCDF Particles Reader",
                 extensions="nc", file_description="NetCDF Particles files")
