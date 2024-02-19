@@ -218,11 +218,11 @@ class PythonNetCDFProfilesReader(VTKPythonAlgorithmBase):
                            
 
             """
-            A vertical coordinate will be identifiable by:          
+            CF-Conventions: "A vertical coordinate will be identifiable by:          
                 units of pressure; or       
-                the presence of the positive attribute with a value of up or down (case insensitive).
+                the presence of the positive attribute with a value of up or down (case insensitive)."
                 
-             The Z  dimension will be identified by the "positive" attribute 
+             The Z (vertical)  dimension will be identified by the "positive" attribute 
              If there is no Z dimension, we put a 0 value as the 3rd coordinate
             """
             pos_matching = [s for s in nc_attribs if any(xs in s for xs in positive_match)]  
@@ -261,8 +261,8 @@ class PythonNetCDFProfilesReader(VTKPythonAlgorithmBase):
                     ParaView will NOT allocate Pathlines for them, when the Temporal Particles to Pathlines filter will be applied on the data.
                     So we'll have to find the indices of the first valid value for such particles, append them to self.stop_indices
                     then later copy the first valid value over those specific missing ones - this will be done with self.copy_first_valid_point()
-                    This will result in ParaView allocation the correct number of Pathlines and Particles - and those specific Particles will 
-                    appear directly on the first valid position in the visualization - adn will start to move accordingly, when the valid time steps are reached.
+                    This will result in ParaView allocating the correct number of Pathlines and Particles - and those specific Particles will 
+                    appear directly on the first valid position in the visualization - and will start to move accordingly, when the valid time steps are reached.
                     """
                     lat_missvals_indices = np.argwhere(ma.getmask(self.lat))
                     mask_lat = ma.getmask(self.lat) 
