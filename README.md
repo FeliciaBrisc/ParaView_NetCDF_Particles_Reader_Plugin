@@ -16,6 +16,7 @@ My work Python - ParaView configuration on Windows 10:
 -   then activate the relevant environment, in my case :
     conda activate PYTHON310
 -   and set up the PYTHONHOME and PYTHONPATH variables, for ParaView to work with this environment and recognize the necessary libraries:
+
     set PYTHONHOME=my_path_to\anaconda3\envs\PYTHON310
     
     set PYTHONPATH=my_path_to\anaconda3\envs\PYTHON310\lib
